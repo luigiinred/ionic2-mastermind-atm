@@ -1,0 +1,72 @@
+<ion-content padding>
+	<ion-grid style="font-size:36px;">
+		<ion-row>
+			<ion-col>
+				{{guess[0] == undefined? "&#8226;":guess[0]}}
+			</ion-col>
+			<ion-col>
+				{{guess[1] == undefined? "&#8226;":guess[1]}}
+			</ion-col>
+			<ion-col>
+				{{guess[2] == undefined? "&#8226;":guess[2]}}
+			</ion-col>
+			<ion-col>
+				{{guess[3] == undefined? "&#8226;":guess[3]}}
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<hr>
+	<ion-grid>
+		<ion-row>
+			<ion-col>
+				<button (click)="add(1)">1</button>
+			</ion-col>
+			<ion-col>
+				<button (click)="add(2)">2</button>
+			</ion-col>
+			<ion-col>
+				<button (click)="add(3)">3</button>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<button (click)="add(4)">4</button>
+			</ion-col>
+			<ion-col>
+				<button (click)="add(5)">5</button>
+			</ion-col>
+			<ion-col>
+				<button (click)="add(6)">6</button>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<button (click)="add(7)">7</button>
+			</ion-col>
+			<ion-col>
+				<button (click)="add(8)">8</button>
+			</ion-col>
+			<ion-col>
+				<button (click)="add(9)">9</button>
+			</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col>
+				<button (click)="remove()"><</button>
+			</ion-col>
+			<ion-col>
+				<button (click)="add(0)">0</button>
+			</ion-col>
+			<ion-col>
+
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-list>
+		<ion-item *ngFor="let try of tries">
+			{{try.guess[0]}} {{try.guess[1]}} {{try.guess[2]}} {{try.guess[3]}} - Place:{{try.numCorrectPlace}} - Value:{{try.numCorrectVal}}
+		</ion-item>
+	</ion-list>
+</ion-content>
