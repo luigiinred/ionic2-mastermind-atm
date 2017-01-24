@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { SolutionPage } from '../pages/solution/solution';
 
 
 @NgModule({
@@ -9,7 +10,7 @@ import { HomePage } from '../pages/home/home';
     MyApp,
 
     HomePage,
-
+SolutionPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -19,7 +20,7 @@ import { HomePage } from '../pages/home/home';
     MyApp,
 
     HomePage,
-
+SolutionPage
   ],
   providers: []
 })
