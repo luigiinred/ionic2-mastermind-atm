@@ -12,7 +12,11 @@
 
 $text-color:        #000;
 $background-color:  #fff;
-
+$modal-inset-min-width:10000px;
+$modal-inset-min-height-large:000px;
+div.modal-wrapper{
+  height:100%!important;
+}
 
 // Named Color Variables
 // --------------------------------------------------

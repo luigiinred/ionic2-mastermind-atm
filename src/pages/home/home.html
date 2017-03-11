@@ -36,7 +36,7 @@
 						<button class="atmbutton" (click)="add(3)">3<small>DEF</small></button>
 					</ion-col>
 					<ion-col>
-						<button class="rightButton cancel" click="remove()">CANCEL</button>
+						<button class="rightButton cancel" (click)="remove()">CANCEL</button>
 					</ion-col>
 				</ion-row>
 				<ion-row>
@@ -152,17 +152,17 @@
 							</ion-row>
 						</ion-grid>
 					</ion-col>
-					<ion-col>
-						{{try.guess[0]}}
+					<ion-col><span class="number number{{try.guess[0]}}">
+						{{try.guess[0]}}</span>
 					</ion-col>
-					<ion-col>
-						{{try.guess[1]}}
+					<ion-col><span class="number number{{try.guess[1]}}">
+						{{try.guess[1]}}</span>
 					</ion-col>
-					<ion-col>
-						{{try.guess[2]}}
+					<ion-col><span class="number number{{try.guess[2]}}">
+						{{try.guess[2]}}</span>
 					</ion-col>
-					<ion-col>
-						{{try.guess[3]}}
+					<ion-col><span class="number number{{try.guess[3]}}">
+						{{try.guess[3]}}</span>
 					</ion-col>
 					<ion-col>
 

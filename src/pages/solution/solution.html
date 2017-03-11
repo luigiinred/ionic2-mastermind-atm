@@ -1,3 +1,30 @@
-<ion-content style="overflow:hidden">
-<video src="./assets/SouthParkKylesMoney.mp4" style="width:100%" autoplay="true" (ended)="close()"></video>
+<ion-content style="overflow:hidden" class="screen container solution">
+    <!--<video src="./assets/SouthParkKylesMoney.mp4" style="width:100%" autoplay="true" (ended)="close()"></video>-->
+    <ion-grid class="keypad">
+        <ion-row>
+            <ion-col>
+                <button ion-button full (click)="withdraw()">Withdraw</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button (click)="deposit()">Deposit</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button disabled (click)="deposit()">Statements</button>
+            </ion-col>
+
+        </ion-row>
+        <ion-row>
+            <ion-col>
+                <button ion-button disabled (click)="deposit()">Cash a Check</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button disabled (click)="deposit()">Account Balance</button>
+            </ion-col>
+            <ion-col>
+                <button ion-button color="danger" (click)="close()">Sign out</button>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
 </ion-content>

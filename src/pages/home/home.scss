@@ -17,6 +17,7 @@ page-home {
          border: 3px solid #444;
     }
     .atm{
+        flex:  2;
                background-color: #6f6f6f;
                border-radius:4px;
     }
@@ -71,7 +72,8 @@ page-home {
 
     .mastermind{
         height:100%;
-        background-color: brown;
+        background-color: #926239
+;
         margin-right: 50px;
         margin-left: 50px;
         ion-col{
@@ -84,7 +86,7 @@ page-home {
             width:48px!important;
             ion-col{
                 border-radius:50px;
-                background-color: #666;
+                background-color: #664427;
      height: 17px !important;
     width: 17px !important;
     margin: 1px!important;
@@ -106,6 +108,49 @@ page-home {
             height:48px;
             border-top:1px solid black;
         }
+
+
+       .number{
+         background-color:black;
+         padding-left:6px;
+         padding-right:6px;
+         border-radius:100%;
+         width:30px;
+         height:30px;
+       }
+       .number1{
+         background-color: red;
+       }
+       .number2{
+         background-color: green;
+       }
+       .number3{
+         background-color: blue;
+       }
+       .number4{
+         background-color: orange;
+       }
+       .number5{
+         background-color: purple;
+       }
+       .number6{
+         background-color: teal;
+       }
+       .number7{
+         background-color: skyblue;
+       }
+       .number8{
+         background-color: deeppink;
+       }
+       .number9{
+         background-color: darkgoldenrod;
+       }
+       .number0{
+         background-color: white;
+         color:black;
+       }
+      
+        
     }
 }
 
@@ -113,7 +158,9 @@ page-home {
 $ease-out-quint:cubic-bezier(0.230, 1.000, 0.320, 1.000);
 $ease-in-quint:cubic-bezier(0.755, 0.050, 0.855, 0.060);
 $screen-background:#121010;
-
+.alert-title{
+  color:black;
+}
 
 body{
   background:#111;

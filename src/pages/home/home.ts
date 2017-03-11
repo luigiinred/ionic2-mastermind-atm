@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController, ModalController } from 'ionic-angular';
 import { SolutionPage } from '../solution/solution';
+import { AlertController } from 'ionic-angular';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -14,7 +15,7 @@ export class HomePage {
   filler = [];
   maxTries = 15;
 
-  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, private alertCtrl: AlertController) {
     this.getSolution();
     console.log(this.solution)
     this.filler.length = this.maxTries;
@@ -31,10 +32,28 @@ export class HomePage {
 
     }
   }
+
   remove() {
-    if (this.guess.length !== 0) {
-      this.guess.splice(this.guess.length - 1, 1);
-    }
+    let alert = this.alertCtrl.create({
+      title: "Do you want to start over?",
+
+      buttons: [
+        {
+          text: 'No',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Yes',
+          handler: () => {
+            this.reset();
+          }
+        }
+      ]
+    });
+    alert.present();
   }
   clear() {
     this.guess = [];
@@ -103,6 +122,12 @@ export class HomePage {
         this.reset()
       }
       if (this.tries.length == 15) {
+        let alert = this.alertCtrl.create({
+          title: 'Too many tries. Your pin has changed.',
+
+          buttons: ['Dismiss']
+        });
+        alert.present();
         this.reset();
       }
       return (numCorrectPlace === 4)
